@@ -1,28 +1,28 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
 
-body{
+body {
 	text-align: center;
 	background-color: #000000;
 }
 
 
-#game{
+#game {
 	position: relative;
 	margin: 0;
 	background-color: #000000;
-	height: 100vh;
+	height: calc(100vh - 56px);
 }
 
-.card{
+.card {
 	perspective: 600px;
 	position: absolute;
 	border-radius: 10px;
 }
 
-.face{
+.face {
 	border-radius: 10px;
 	width: 100%;
 	height: 100%;
@@ -32,32 +32,33 @@ body{
 	background-size: cover;
 }
 
-.front{
+.front {
 	transform: rotateY(-180deg);
 }
 
-.flipped.front{
+.flipped.front {
 	transform: rotateY(0deg);
 }
 
-.back{
+.back {
 	background: url(../img/fundo.jpg);
 	background-size: cover;
 }
 
-.flipped.back{
+.flipped.back {
 	transform: rotateY(180deg);
 }
 
-.card:hover, .face.flipped{
+.card:hover,
+.face.flipped {
 	box-shadow: 0 0 10px #aaa;
 }
 
-.face.flipped.match{
+.face.flipped.match {
 	box-shadow: 0 0 10px #0f0;
 }
 
-#match{
+#match {
 	position: relative;
 	margin: 0 auto;
 	top: 250px;
@@ -67,16 +68,16 @@ body{
 	transition-duration: 3s;
 }
 
-#gameOver{
+#gameOver {
 	position: absolute;
 	top: 0;
 	border-radius: 5px;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(0, 0, 0, 0.25);
 	z-index: -2;
 }
 
-#imgGameOver{
+#imgGameOver {
 	margin-top: 100px;
 }
