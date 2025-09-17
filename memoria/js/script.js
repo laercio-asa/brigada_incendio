@@ -65,7 +65,7 @@ for (var i = 0; i < 16; i++) {
 	//cria um objeto img com um src e um id
 	var img = {
 		src: "img/" + numerosSorteados[i] + ".jpg",
-		id: numerosSorteados[i] % 8
+		id: i % 8
 	};
 
 	//inserer o objeto criado no array
@@ -133,6 +133,10 @@ function startGame() {
 
 //função que vira as cartas
 function flipCard() {
+	if (flippedCards.length == 1) {	
+		tentativas++;
+		document.getElementById("tentativas").innerText = tentativas;
+	}
 	//verifica se o número de cartas viradas é menor que 2
 	if (flippedCards.length < 2) {
 		//pega as faces da carta clicada
@@ -185,8 +189,7 @@ function flipCard() {
 
 		//limpa o array de cartas viradas
 		flippedCards = [];
-		tentativas++;
-		document.getElementById("tentativas").innerText = tentativas;
+		
 	}
 }
 
