@@ -91,7 +91,7 @@ function startGame() {
 	document.getElementById("equipe").classList.add("d-none");
 	//zera o array de cartas viradas
 	flippedCards = [];
-
+	tentativas = 0;
 	//zera o contador de acertos
 	matches = 0;
 
@@ -145,7 +145,7 @@ function startGame() {
 
 //função que vira as cartas
 function flipCard() {
-	if (flippedCards.length == 1) {	
+	if (flippedCards.length == 1) {
 		tentativas++;
 		document.getElementById("tentativas").innerText = tentativas;
 	}
@@ -202,7 +202,7 @@ function flipCard() {
 
 		//limpa o array de cartas viradas
 		flippedCards = [];
-		
+
 	}
 }
 
