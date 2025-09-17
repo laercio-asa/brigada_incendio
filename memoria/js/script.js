@@ -17,6 +17,7 @@ for (var i = 0; i < 16; i++) {
 	document.querySelector("#card" + i).style.height = alturaCard + "px";
 }
 
+
 let qtdCards = Math.floor(largura / (larguraCard + 5))
 
 //array que armazenará os objetos com src e id de 1 a 8

@@ -22,19 +22,25 @@
 <body>
 	<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 		<div class="container-fluid">
-			<a class="navbar-brand fw-bold" href="#">Conheça os Brigadistas e Socorristas</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-				aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarText">
-				<div class="me-auto"></div>
-				<span class="navbar-text">
-					<span>Tentativas: <span id="tentativas"></span></span>
-				</span>
-			</div>
+			<a class="navbar-brand fw-bold" href="#">Conheça os Brigadistas</a>
+			<div class="me-auto"></div>
+			<span class="navbar-text">
+				<span>Tentativas: <span id="tentativas"></span></span>
+			</span>
 		</div>
 	</nav>
+	<div id="game-over">
+		<div class="container d-flex text-center">
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+			<div class="p-1"><img src="./img/0.jpg" class="img-fluid"></div>
+		</div>
+	</div>
 	<div id="game">
 		<div class="card" id="card0">
 			<div class="face back"></div>
@@ -104,7 +110,7 @@
 		<img id="match" src="img/match .png" />
 
 		<div id="gameOver">
-			<img id="imgGameOver" src="img/gameover.png" />
+			<img id="imgGameOver" src="img/gameover.png" style="max-width: 80vw;" />
 		</div>
 	</div>
 
