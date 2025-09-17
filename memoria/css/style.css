@@ -64,7 +64,7 @@ body{
 	z-index: -1;
 	opacity: 1;
 	transition-property: top, opacity;
-	transition-duration: 1.5s;
+	transition-duration: 3s;
 }
 
 #gameOver{

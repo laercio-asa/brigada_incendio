@@ -88,6 +88,7 @@ startGame();
 
 //função de inicialização do jogo
 function startGame() {
+	document.getElementById("equipe").classList.add("d-none");
 	//zera o array de cartas viradas
 	flippedCards = [];
 
