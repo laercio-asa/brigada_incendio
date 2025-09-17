@@ -1,6 +1,7 @@
 
 let largura = window.innerWidth;
 let altura = window.innerHeight;
+let tentativas = 0;
 
 let larguraCard = 100;
 if (largura > altura) {
@@ -33,13 +34,38 @@ var flippedCards = [];
 //variável contadora de acertos. ao chegar em 8 o jogo termina
 var matches = 0;
 
+function sortearNumeros(listaOriginal, quantidade) {
+	// Cria uma cópia da lista original para não modificá-la diretamente
+	const listaEmbaralhada = [...listaOriginal];
+
+	// Embaralha a lista usando o método sort() com uma função de comparação aleatória
+	listaEmbaralhada.sort(() => Math.random() - 0.5);
+
+	// Pega os primeiros 'quantidade' elementos da lista embaralhada
+	const numerosSorteados = listaEmbaralhada.slice(0, quantidade);
+
+	return numerosSorteados;
+}
+
+// Exemplo de uso:
+const listaCompleta = [
+	0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+];
+const numerosSorteados = sortearNumeros(listaCompleta, 8);
+for (var i = 0; i < 8; i++) {
+	numerosSorteados.push(numerosSorteados[i] + 16);
+}
+console.log(numerosSorteados);
+
+const diferente = listaCompleta.filter(item => !numerosSorteados.includes(item));
+console.log(diferente); // Saída: [1, 2]
 
 //estrutura de atribiução das imagens aos card
 for (var i = 0; i < 16; i++) {
 	//cria um objeto img com um src e um id
 	var img = {
-		src: "img/" + i + ".jpg",
-		id: i % 8
+		src: "img/" + numerosSorteados[i] + ".jpg",
+		id: numerosSorteados[i] % 8
 	};
 
 	//inserer o objeto criado no array
@@ -65,6 +91,7 @@ function startGame() {
 	var frontFaces = document.getElementsByClassName("front");
 
 	//posicionamento das cartas e adição do evento click
+
 
 	topCard = 0;
 	let ii = 0;
@@ -158,6 +185,8 @@ function flipCard() {
 
 		//limpa o array de cartas viradas
 		flippedCards = [];
+		tentativas++;
+		document.getElementById("tentativas").innerText = tentativas;
 	}
 }
 
@@ -241,7 +270,7 @@ window.addEventListener('resize', function () {
 	}
 
 	let qtdCards = Math.floor(largura / (larguraCard + 5))
-topCard = 0;
+	topCard = 0;
 	let ii = 0;
 	for (var i = 0; i < 16; i++) {
 		if (ii == qtdCards) {

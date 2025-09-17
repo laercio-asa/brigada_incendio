@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function sortearNumeros(listaOriginal, quantidade) {
+            // Cria uma cópia da lista original para não modificá-la diretamente
+            const listaEmbaralhada = [...listaOriginal];
+
+            // Embaralha a lista usando o método sort() com uma função de comparação aleatória
+            listaEmbaralhada.sort(() => Math.random() - 0.5);
+
+            // Pega os primeiros 'quantidade' elementos da lista embaralhada
+            const numerosSorteados = listaEmbaralhada.slice(0, quantidade);
+
+            return numerosSorteados;
+        }
+
+        // Exemplo de uso:
+        const listaCompleta = [
+            0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+        ];
+        const numerosSorteados = sortearNumeros(listaCompleta, 8);
+
+        console.log(numerosSorteados); // Exibe os 8 números sorteados aleatoriamente
+    </script>
+</body>
+
+</html>
