@@ -61,6 +61,16 @@ console.log(numerosSorteados);
 const diferente = listaCompleta.filter(item => !numerosSorteados.includes(item));
 console.log(diferente); // Saída: [1, 2]
 
+document.getElementById("dif0").src = "img/" + diferente[0] + ".jpg";
+document.getElementById("dif1").src = "img/" + diferente[1] + ".jpg";
+document.getElementById("dif2").src = "img/" + diferente[2] + ".jpg";
+document.getElementById("dif3").src = "img/" + diferente[3] + ".jpg";
+document.getElementById("dif4").src = "img/" + diferente[4] + ".jpg";
+document.getElementById("dif5").src = "img/" + diferente[5] + ".jpg";
+document.getElementById("dif6").src = "img/" + diferente[6] + ".jpg";
+document.getElementById("dif7").src = "img/" + diferente[7] + ".jpg";
+
+
 //estrutura de atribiução das imagens aos card
 for (var i = 0; i < 16; i++) {
 	//cria um objeto img com um src e um id
@@ -177,6 +187,7 @@ function flipCard() {
 				//verifica se o contador de acertos chegou a 8
 				if (matches >= 8) {
 					//caso haja 8 acertos, chama a função que finaliza o jogo
+					document.getElementById("equipe").classList.remove("d-none");
 					gameOver();
 				}
 			}
