@@ -96,7 +96,7 @@ var Game = function(positions){
 		});
 
 		alert("Você acertou "+$this.vars.accepts+" de 7 erros.");
-		
+
 		if( $this.vars.accepts == 7 )
 		{
 			return true;

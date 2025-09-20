@@ -19,13 +19,18 @@
 
 	<div class="container bg-white">
 		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-5 col-9 mx-auto p-2">
+			<div class="col-md-2 text-end pt-5">
+
+				<input class="btn btn-primary d-block w-100 my-4" type="button" value="Jogar novamente" onclick="jogo.start();">
+				<input class="btn btn-danger d-block w-100" type="button" value="Finalizar jogo" onclick="jogo.verify();">
+
+			</div>
+			<div class="col-md-5 col-9 p-2">
 				<div id="canvas-main" class="canvas">
 					<img src="./img/escada1.png" draggable="false" class="img-fluid">
 				</div>
 			</div>
-			<div class="col-md-5 col-9 mx-auto p-2">
+			<div class="col-md-5 col-9 p-2">
 				<div id="canvas-copy" class="canvas">
 					<img src="./img/escada2.png" draggable="false" class="img-fluid">
 					<i class="cursor"></i>
@@ -33,14 +38,16 @@
 			</div>
 		</div>
 	</div>
-	<br />
-	<input type="button" value="Finalizar jogo" onclick="jogo.verify();">
-	<input type="button" value="Jogar novamente" onclick="jogo.start();">
 
 
 	<script src="./js/game.js"></script>
 	<script>
 		$(document).ready(function () {
+			let largura = document.getElementById('canvas-main').offsetWidth;
+            let altura = document.getElementById('canvas-main').offsetHeight;	
+			$x6 = 450 * (largura / 900);
+			$y6 = 850 * (altura / 1600);
+
 			var positions = {
 				'0': { x: '195', y: '125' },
 				'1': { x: '476', y: '130' },
@@ -48,7 +55,7 @@
 				'3': { x: '330', y: '255' },
 				'4': { x: '380', y: '425' },
 				'5': { x: '190', y: '460' },
-				'6': { x: '190', y: '70' }
+				'6': { x: $x6, y: $y6 }
 			}
 
 			jogo = new Game(positions);
