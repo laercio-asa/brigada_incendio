@@ -1,7 +1,7 @@
 var Game = function(positions){
 	$this 		   = this;
 	$this.vars 	   = { positions: positions, currentPositions: {}, markers: 0, started : false, ended : false };
-	$this.defaults = { radius : 50 };
+	$this.defaults = { radius : 40 };
 	$canvas_main = $("#canvas-main");
 	$canvas = $('.canvas');
 	var positions = positions;

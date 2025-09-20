@@ -6,41 +6,41 @@
 }
 
 .marker {
-    width: calc(50px * (100vw / 1920px));
-    height: calc(50px * (100vw / 1920px));
-            background: rgba(128, 128, 128, 0.753);
-            position: absolute;
-            border-radius: 50%;
-    }
+    width: 40px;
+    height: 40px;
+    background: rgba(128, 128, 128, 0.753);
+    position: absolute;
+    border-radius: 50%;
+}
 
-    .marker.accept {
-        background: lightgreen;
-    }
+.marker.accept {
+    background: lightgreen;
+}
 
-    .marker.reject {
-        background: red;
-    }
+.marker.reject {
+    background: red;
+}
 
-    .target {
-        width: calc(50px * (100vw / 1920px));
-            height: calc(50px * (100vw / 1920px));
-                background: green;
-                position: absolute;
-                border-radius: 50%;
-            }
+.target {
+    width: 40px;
+    height: 40px;
+    background: green;
+    position: absolute;
+    border-radius: 50%;
+}
 
-            .cursor {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 17px;
-                height: 25px;
-                opacity: 0;
-                background: url(../img/cursor.png) center top no-repeat;
-                transition: opacity 0.2s linear;
-                z-index: 2;
-            }
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17px;
+    height: 25px;
+    opacity: 0;
+    background: url(../img/cursor.png) center top no-repeat;
+    transition: opacity 0.2s linear;
+    z-index: 2;
+}
 
-            .cursor.visible {
-                opacity: 1;
-            }
+.cursor.visible {
+    opacity: 1;
+}
