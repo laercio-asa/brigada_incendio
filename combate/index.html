@@ -240,9 +240,16 @@
 
             }, 3000);
 
-
             setTimeout(function () {
-                if (cena == 2) {
+                let largura = window.innerWidth;
+                let altura = window.innerHeight;
+                if (largura > altura * 1.7) {
+                    largura = altura * 1.7;
+                } else {
+                    altura = largura / 1.7;
+                }
+
+                if (cena == 3) {
                     let fogo = document.getElementById('fogo');
                     fogo.style.top = 540 * (largura / 1054) + 'px';
                     fogo.style.left = 674 * (largura / 1054) + 'px';
@@ -251,7 +258,6 @@
                 }
             }, 5000);
         }
-
 
     </script>
 </body>
