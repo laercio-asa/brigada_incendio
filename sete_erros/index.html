@@ -54,15 +54,22 @@
 				</div>
 				<div class="modal-body">
 					<h3>Parabéns! Você acertou <span class="fw-bold text-primary" id="acertos"></span> de 7 erros.</h3>
-					<h5>👀 Já reparou que o maior perigo na escada é descer mexendo no celular ou com as duas mãos ocupadas?<br>Se você escorregar, não dá tempo nem de segurar no corrimão!</h5>
-					<h5>🚫 A escada também não é lugar para sentar.<br>O Senac tem sofás, bancos e cadeiras por toda a unidade — muito mais confortáveis.</h5>
-					<h5>😴 Dormir na escada? Nem pensar!<br>Além de ser desconfortável, você pode atrapalhar a passagem. Vá para os sofás: lá dá até para deixar o celular carregando enquanto descansa!</h5>
+					<h5>👀 Já reparou que o maior perigo na escada é descer mexendo no celular ou com as duas mãos
+						ocupadas?<br>Se você escorregar, não dá tempo nem de segurar no corrimão!</h5>
+					<h5>🚫 A escada também não é lugar para sentar.<br>O Senac tem sofás, bancos e cadeiras por toda a
+						unidade — muito mais confortáveis.</h5>
+					<h5>😴 Dormir na escada? Nem pensar!<br>Além de ser desconfortável, você pode atrapalhar a passagem.
+						Vá para os sofás: lá dá até para deixar o celular carregando enquanto descansa!</h5>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="position-absolute start-0 bottom-0 card p-1">
+		<a href="../index.html" class="btn btn-dark">Voltar</a>
 	</div>
 
 	<script src="./js/game.js"></script>
@@ -93,11 +100,13 @@
 				'4': { x: $x4, y: $y4 },
 				'5': { x: $x5, y: $y5 },
 				'6': { x: $x6, y: $y6 }
-			}
+			};
 
 			jogo = new Game(positions);
 			// jogo.debug();
-		})
+		});
+
+
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
