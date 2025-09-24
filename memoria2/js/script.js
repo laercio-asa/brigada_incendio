@@ -36,7 +36,7 @@ var flippedCards = [];
 var matches = 0;
 
 // Exemplo de uso:
-const numerosSorteados = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const numerosSorteados = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 for (var i = 0; i < 12; i++) {
 	numerosSorteados.push(numerosSorteados[i] + 12);
 }
