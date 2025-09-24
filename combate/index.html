@@ -87,7 +87,7 @@
                         <div class="col classe-c">
                             <div class="card p-2 h-100" id="tipo1">
                                 <span class="h3">Água</span>
-                                <span class="h4 text-success">NÃO</span>Excelente
+                                <span class="h4 text-danger">NÃO</span>Excelente
                             </div>
                         </div>
                         <div class="col classe-c">
@@ -118,6 +118,8 @@
 
     <script>
 
+        let cena = 1;
+
         window.addEventListener('resize', function () {
             tamanho();
         });
@@ -140,10 +142,6 @@
             fogo.style.top = 423 * (largura / 1054) + 'px';
             fogo.style.left = 995 * (largura / 1054) + 'px';
 
-            let bombeiro = document.getElementById('bombeiro');
-            bombeiro.style.height = 342 * (largura / 1054) + 'px';
-            bombeiro.style.top = 224 * (largura / 1054) + 'px';
-            bombeiro.style.left = 727 * (largura / 1054) + 'px';
 
             document.getElementById('btnAgua').style.height = 180 * (largura / 1054) + 'px';
             document.getElementById('btnCO2').style.height = 180 * (largura / 1054) + 'px';
@@ -158,17 +156,42 @@
         tamanho();
 
         function bombeiro(id, tipo) {
-            
+
             for (let i = 0; i < document.getElementsByClassName('classe-a').length; i++) {
                 document.getElementsByClassName('classe-a')[i].classList.add("d-none");
             }
             for (let i = 0; i < document.getElementsByClassName('classe-c').length; i++) {
                 document.getElementsByClassName('classe-c')[i].classList.add("d-none");
             }
+            if (cena == 1) {
+                id = 'a';
+            }
+            else if (cena == 2) {
+                id = 'c';
+            }
             for (let i = 0; i < document.getElementsByClassName('classe-' + id).length; i++) {
                 document.getElementsByClassName('classe-' + id)[i].classList.remove("d-none");
             }
 
+
+            let largura = window.innerWidth;
+            let altura = window.innerHeight;
+            if (largura > altura * 1.7) {
+                largura = altura * 1.7;
+            } else {
+                altura = largura / 1.7;
+            }
+            let bombeiro = document.getElementById('bombeiro');
+
+            bombeiro.style.height = 342 * (largura / 1054) + 'px';
+            bombeiro.style.top = 224 * (largura / 1054) + 'px';
+            console.log(cena);
+            if (cena == 1) {
+                bombeiro.style.left = 727 * (largura / 1054) + 'px';
+            }
+            else if (cena == 2) {
+                bombeiro.style.left = 80 * (largura / 1054) + 'px';
+            }
 
             document.getElementById("bombeiro").classList.remove("d-none");
 
@@ -181,11 +204,12 @@
 
             document.getElementById("tipo" + tipo).classList.add("bg-info-subtle");
             document.getElementById("tipo" + tipo).classList.add("shadow");
-            
+
         }
 
         function fechar() {
             document.getElementById('fogo').classList.add('d-none');
+
             setTimeout(function () {
                 document.getElementById('bombeiro').classList.add('d-none');
             }, 2000);
@@ -198,11 +222,22 @@
                 } else {
                     altura = largura / 1.7;
                 }
-                let fogo = document.getElementById('fogo');
-                fogo.style.top = 345 * (largura / 1054) + 'px';
-                fogo.style.left = 380 * (largura / 1054) + 'px';
-                document.getElementById('fogo').classList.remove('d-none');
-                ;
+
+                if (cena == 1) {
+                    let fogo = document.getElementById('fogo');
+                    fogo.style.top = 345 * (largura / 1054) + 'px';
+                    fogo.style.left = 380 * (largura / 1054) + 'px';
+                    document.getElementById('fogo').classList.remove('d-none');
+                    cena += 1;
+                }
+                else if (cena == 2) {
+                    let fogo = document.getElementById('fogo');
+                    fogo.style.top = 345 * (largura / 1054) + 'px';
+                    fogo.style.left = 380 * (largura / 1054) + 'px';
+                    document.getElementById('fogo').classList.remove('d-none');
+                    cena += 1;
+                }
+
             }, 3000);
         }
 
