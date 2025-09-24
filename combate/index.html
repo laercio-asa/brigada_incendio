@@ -223,6 +223,9 @@
             else if (cena == 2) {
                 id = 'c';
             }
+            else if (cena == 2) {
+                id = 'b';
+            }
             for (let i = 0; i < document.getElementsByClassName('classe-' + id).length; i++) {
                 document.getElementsByClassName('classe-' + id)[i].classList.remove("d-none");
             }
@@ -263,6 +266,7 @@
 
         function fechar() {
             document.getElementById('fogo').classList.add('d-none');
+            document.getElementById('extintores').classList.add('d-none');
 
             setTimeout(function () {
                 document.getElementById('bombeiro').classList.add('d-none');
@@ -282,10 +286,12 @@
                     fogo.style.top = 345 * (largura / 1054) + 'px';
                     fogo.style.left = 380 * (largura / 1054) + 'px';
                     document.getElementById('fogo').classList.remove('d-none');
+                    document.getElementById('extintores').classList.remove('d-none');
                     cena += 1;
                 }
                 else if (cena == 2) {
                     document.body.style.backgroundImage = "url(./img/cozinha.png)";
+                    document.getElementById('extintores').classList.remove('d-none');
                     cena += 1;
                 }
 
