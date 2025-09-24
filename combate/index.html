@@ -57,52 +57,103 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Uso dos extintores</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                         onclick="fechar()"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="classe-a"><strong>Classe A – </strong>É a combustão mais comum, sobre materiais sólidos
-                        combustíveis, que
-                        queimam em razão
-                        de seu volume, como madeira, papel, algodão e plásticos.</p>
-                    <p class="classe-c"><strong>Classe C – </strong>Quando ocorre em material eletro-eletrônico
-                        energizado, como computadores, geladeiras e aparelhos de som.</p>
-                    <div class="row text-center">
+
+                    <div class="classe-a">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="./img/classe-a.png" class="img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <strong>Classe A – </strong>É a combustão mais comum, sobre materiais sólidos
+                                combustíveis, que
+                                queimam em razão
+                                de seu volume, como madeira, papel, algodão e plásticos.
+                            </div>
+                            <div class="col-3">
+                                <img src="./img/ok.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="classe-c">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="./img/classe-c.png" class="img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <strong>Classe C – </strong>Quando ocorre em material eletro-eletrônico energizado, como
+                                computadores, geladeiras e aparelhos de som.
+                            </div>
+                            <div class="col-3">
+                                <img src="./img/ok.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-2">
                         <div class="col classe-a">
-                            <div class="card p-2 h-100" id="tipo1">
-                                <span class="h5">Água Pressurizada</span>
-                                <span class="h3 text-success">Sim</span>Excelente
+                            <div class="card h-100" id="tipo1">
+                                <div class="card-header">
+                                    <span class="h5">Água Pressurizada</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h3 text-success">Sim</span><br>Excelente
+                                </div>
                             </div>
                         </div>
                         <div class="col classe-a">
-                            <div class="card p-2 h-100" id="tipo2">
-                                <span class="h5">Gás Carbônico</span>
-                                <span class="h3 text-success">Sim</span>Em casos pequenos de superfície
+                            <div class="card h-100" id="tipo2">
+                                <div class="card-header">
+                                    <span class="h5">Gás Carbônico</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h3 text-success">Sim</span><br>Em casos pequenos de superfície
+                                </div>
                             </div>
                         </div>
                         <div class="col classe-a">
-                            <div class="card p-2 h-100" id="tipo3">
-                                <span class="h5">Pó Químico Seco</span>
-                                <span class="h3 text-success">Sim</span>Em casos pequenos de superfície
+                            <div class="card h-100" id="tipo3">
+                                <div class="card-header">
+                                    <span class="h5">Pó Químico Seco</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h3 text-success">Sim</span><br>Em casos pequenos de superfície
+                                </div>
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card p-2 h-100" id="tipo1">
-                                <span class="h3">Água</span>
-                                <span class="h4 text-danger">NÃO</span>Excelente
+                            <div class="card h-100" id="tipo1">
+                                <div class="card-header">
+                                    <span class="h3">Água</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-danger">NÃO</span><br>Excelente
+                                </div>
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card p-2 h-100" id="tipo2">
-                                <span class="h3">CO2</span>
-                                <span class="h4 text-success">Sim</span>Excelente
+                            <div class="card h-100" id="tipo2">
+                                <div class="card-header">
+                                    <span class="h3">CO2</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-success">Sim</span><br>Excelente
+                                </div>
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card p-2 h-100" id="tipo3">
-                                <span class="h3">Pó BC</span>
-                                <span class="h4 text-success">Sim</span>Bom, mas danifica o equipamento
+                            <div class="card h-100" id="tipo3">
+                                <div class="card-header">
+                                    <span class="h3">Pó BC</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-success">Sim</span><br>Bom, mas danifica o equipamento
+                                </div>
                             </div>
                         </div>
                     </div>
