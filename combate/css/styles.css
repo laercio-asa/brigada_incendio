@@ -8,3 +8,9 @@ body {
     background-position: top left;
     background-repeat: no-repeat;
 }
+
+@media (max-width: 600px) {
+    body {
+        background-position-y: 150px !important;
+    }
+}

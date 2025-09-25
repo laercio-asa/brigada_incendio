@@ -102,16 +102,16 @@
 
                     <div class="classe-a">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img src="./img/classe-a.png" class="img-fluid">
                             </div>
-                            <div class="col-6">
+                            <div class="col-8 col-md-6">
                                 <strong>Classe A – </strong>É a combustão mais comum, sobre materiais sólidos
                                 combustíveis, que
                                 queimam em razão
                                 de seu volume, como madeira, papel, algodão e plásticos.
                             </div>
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img id="img-a" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
@@ -119,14 +119,14 @@
 
                     <div class="classe-b">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img src="./img/classe-b.png" class="img-fluid">
                             </div>
-                            <div class="col-6">
+                            <div class="col-8 col-md-6">
                                 <strong>Classe B – </strong> Sobre materiais que queimam apenas em sua superfície, em
                                 sua maioria líquidos inflamáveis como álcool e gasolina.
                             </div>
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img id="img-b" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
@@ -134,14 +134,14 @@
 
                     <div class="classe-c">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img src="./img/classe-c.png" class="img-fluid">
                             </div>
-                            <div class="col-6">
+                            <div class="col-8 col-md-6">
                                 <strong>Classe C – </strong>Quando ocorre em material eletro-eletrônico energizado, como
                                 computadores, geladeiras e aparelhos de som.
                             </div>
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img id="img-c" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
@@ -149,15 +149,15 @@
 
                     <div class="classe-k">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img src="./img/classe-k.png" class="img-fluid">
                             </div>
-                            <div class="col-6">
+                            <div class="col-8 col-md-6">
                                 <strong>Classe K – </strong>Fogo causado por técnicas de se cozinhar, envolvendo banha,
                                 gordura etc. Reconhecidamente é mais difícil de conter que os líquidos inflamáveis da
                                 classe B.
                             </div>
-                            <div class="col-3">
+                            <div class="col-2 col-md-3">
                                 <img id="img-k" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
@@ -309,6 +309,11 @@
 
         let cena = 1;
         let pontuacao = 0;
+        let topo = 0;
+        if ((window.innerWidth) < 600) {
+            topo = 150;
+        }
+
 
         window.addEventListener('resize', function () {
             tamanho();
@@ -329,7 +334,7 @@
             }
             let fogo = document.getElementById('fogo');
             fogo.style.width = 50 * (largura / 1054) + 'px';
-            fogo.style.top = 423 * (largura / 1054) + 'px';
+            fogo.style.top = topo + (423 * (largura / 1054)) + 'px';
             fogo.style.left = 995 * (largura / 1054) + 'px';
 
 
@@ -395,26 +400,26 @@
             if (cena == 1) {
                 bombeiro.style.left = 727 * (largura / 1054) + 'px';
                 bombeiro.style.height = 342 * (largura / 1054) + 'px';
-                bombeiro.style.top = 224 * (largura / 1054) + 'px';
+                bombeiro.style.top = 150 + (224 * (largura / 1054)) + 'px';
             }
             else if (cena == 2) {
                 bombeiro.style.left = 80 * (largura / 1054) + 'px';
                 bombeiro.style.height = 342 * (largura / 1054) + 'px';
-                bombeiro.style.top = 224 * (largura / 1054) + 'px';
+                bombeiro.style.top = 150 + (224 * (largura / 1054)) + 'px';
             }
             else if (cena == 4) {
                 bombeiro.style.left = 390 * (largura / 1054) + 'px';
-                bombeiro.style.top = 277 * (largura / 1054) + 'px';
+                bombeiro.style.top = 150 + (277 * (largura / 1054)) + 'px';
                 bombeiro.style.height = 318 * (largura / 1054) + 'px';
             }
             else if (cena == 5) {
                 bombeiro.style.left = 237 * (largura / 1054) + 'px';
-                bombeiro.style.top = 277 * (largura / 1054) + 'px';
+                bombeiro.style.top = 150 + (277 * (largura / 1054)) + 'px';
                 bombeiro.style.height = 318 * (largura / 1054) + 'px';
             }
             else if (cena == 6) {
                 bombeiro.style.left = 607 * (largura / 1054) + 'px';
-                bombeiro.style.top = 277 * (largura / 1054) + 'px';
+                bombeiro.style.top = 150 + (277 * (largura / 1054)) + 'px';
                 bombeiro.style.height = 318 * (largura / 1054) + 'px';
             }
 
@@ -463,7 +468,7 @@
 
                 if (cena == 1) {
                     let fogo = document.getElementById('fogo');
-                    fogo.style.top = 345 * (largura / 1054) + 'px';
+                    fogo.style.top = 150 + (345 * (largura / 1054)) + 'px';
                     fogo.style.left = 380 * (largura / 1054) + 'px';
                     document.getElementById('fogo').classList.remove('d-none');
                     document.getElementById('extintores').classList.remove('d-none');
@@ -475,7 +480,7 @@
                 }
                 else if (cena == 4) {
                     let fogo = document.getElementById('fogo');
-                    fogo.style.top = 312 * (largura / 1054) + 'px';
+                    fogo.style.top = 150 + (312 * (largura / 1054)) + 'px';
                     fogo.style.left = 478 * (largura / 1054) + 'px';
                     document.getElementById('fogo').classList.remove('d-none');
                     document.getElementById('extintores').classList.remove('d-none');
@@ -483,7 +488,7 @@
                 }
                 else if (cena == 5) {
                     let fogo = document.getElementById('fogo');
-                    fogo.style.top = 298 * (largura / 1054) + 'px';
+                    fogo.style.top = 150 + (298 * (largura / 1054)) + 'px';
                     fogo.style.left = 859 * (largura / 1054) + 'px';
                     document.getElementById('fogo').classList.remove('d-none');
                     document.getElementById('extintores').classList.remove('d-none');
@@ -505,7 +510,7 @@
                 if (cena == 3) {
                     let fogo = document.getElementById('fogo');
                     fogo.style.width = 80 * (largura / 1054) + 'px'
-                    fogo.style.top = 515 * (largura / 1054) + 'px';
+                    fogo.style.top = 150 + (515 * (largura / 1054)) + 'px';
                     fogo.style.left = 657 * (largura / 1054) + 'px';
                     document.getElementById('fogo').classList.remove('d-none');
                     document.getElementById('extintores').classList.remove('d-none');
