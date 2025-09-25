@@ -46,6 +46,7 @@
 
     </div>
 
+
     <img id="bombeiro1" class="position-absolute d-none" src="./img/bombeiro1.png">
     <img id="bombeiro2" class="position-absolute d-none" src="./img/bombeiro2.png">
 
@@ -53,8 +54,43 @@
         <a href="../index.html" class="btn btn-dark">Voltar</a>
     </div>
 
+    <div class="position-absolute end-0 Top-0 card p-1 m-1 px-4 py-2 h5 bg-success-subtle">
+        <span class="text-nowrap">Pontuação: <span id="pontuacao">0</span></span>
+    </div>
+
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Jogo finalizado</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Parabéns! Você acertou <span class="fw-bold text-primary" id="acertos"></span> de 15 pontos.
+                    </h3>
+                    <p>🏆 MISSÃO CUMPRIDA! 🏆</p>
+                    <p>🔥 Você venceu o desafio e mostrou que é um verdadeiro herói da prevenção! 🔥<br>
+                        Agora você sabe escolher o extintor certo para cada tipo de fogo — e isso é um superpoder na
+                        vida real! 💪🚒</p>
+                    <p>🌟 Continue treinando suas habilidades e compartilhe esse conhecimento com seus amigos.<br>
+                        Quanto mais pessoas souberem agir, mais seguro o mundo fica! 💡</p>
+
+                    <p>🎮 Parabéns por jogar e aprender! Até a próxima missão! 🚀</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        onclick="javascript:window.location.reload(false);">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -258,10 +294,6 @@
 
                     </div>
 
-                    <div class="">
-
-                    </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
@@ -271,9 +303,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
 
     <script>
 
@@ -404,7 +434,7 @@
             pontuacao += Number(valor);
             document.getElementById(`img-${id}`).src = `./img/${valor}.png`;
 
-            console.log(pontuacao);
+            document.getElementById("pontuacao").innerHTML = pontuacao;
 
         }
 
@@ -415,6 +445,11 @@
             setTimeout(function () {
                 document.getElementById('bombeiro1').classList.add('d-none');
                 document.getElementById('bombeiro2').classList.add('d-none');
+                if (cena == 6) {
+                    document.getElementById("acertos").innerHTML = pontuacao;
+                    const meuModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+                    meuModal.show();
+                }
             }, 2000);
 
             setTimeout(function () {
@@ -455,6 +490,7 @@
                     cena += 1
                 }
 
+
             }, 3000);
 
             setTimeout(function () {
@@ -476,9 +512,15 @@
                     cena += 1
                 }
             }, 5000);
+
         }
 
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
