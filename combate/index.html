@@ -76,7 +76,7 @@
                                 de seu volume, como madeira, papel, algodão e plásticos.
                             </div>
                             <div class="col-3">
-                                <img src="./img/ok.png" class="img-fluid">
+                                <img id="img-a" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 sua maioria líquidos inflamáveis como álcool e gasolina.
                             </div>
                             <div class="col-3">
-                                <img src="./img/ok.png" class="img-fluid">
+                                <img id="img-b" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                                 computadores, geladeiras e aparelhos de som.
                             </div>
                             <div class="col-3">
-                                <img src="./img/ok.png" class="img-fluid">
+                                <img id="img-c" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                                 classe B.
                             </div>
                             <div class="col-3">
-                                <img src="./img/ok.png" class="img-fluid">
+                                <img id="img-k" src="./img/ok.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                     <div class="row text-center mt-2">
                         <!-- Classe a -->
                         <div class="col classe-a">
-                            <div class="card h-100" id="tipo-a-1">
+                            <div class="card h-100" id="tipo-a-1" data-value="3">
                                 <div class="card-header">
                                     <span class="h5">Água Pressurizada</span>
                                 </div>
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         <div class="col classe-a">
-                            <div class="card h-100" id="tipo-a-2">
+                            <div class="card h-100" id="tipo-a-2" data-value="1">
                                 <div class="card-header">
                                     <span class="h5">Gás Carbônico</span>
                                 </div>
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <div class="col classe-a">
-                            <div class="card h-100" id="tipo-a-3">
+                            <div class="card h-100" id="tipo-a-3" data-value="1">
                                 <div class="card-header">
                                     <span class="h5">Pó Químico Seco</span>
                                 </div>
@@ -162,17 +162,17 @@
 
                         <!-- Classe C -->
                         <div class="col classe-c">
-                            <div class="card h-100" id="tipo-c-1">
+                            <div class="card h-100" id="tipo-c-1" data-value="0">
                                 <div class="card-header">
                                     <span class="h3">Água</span>
                                 </div>
                                 <div class="card-body">
-                                    <span class="h4 text-danger">NÃO</span><br>Excelente
+                                    <span class="h4 text-danger">NÃO</span><br>O líquido incentiva o fogo
                                 </div>
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card h-100" id="tipo-c-2">
+                            <div class="card h-100" id="tipo-c-2" data-value="3">
                                 <div class="card-header">
                                     <span class="h3">CO2</span>
                                 </div>
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card h-100" id="tipo-c-3">
+                            <div class="card h-100" id="tipo-c-3" data-value="1">
                                 <div class="card-header">
                                     <span class="h3">P.Q.S</span>
                                 </div>
@@ -194,7 +194,7 @@
 
                         <!-- Classe B -->
                         <div class="col classe-b">
-                            <div class="card h-100" id="tipo-b-1">
+                            <div class="card h-100" id="tipo-b-1" data-value="0">
                                 <div class="card-header">
                                     <span class="h3">Água</span>
                                 </div>
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                         <div class="col classe-b">
-                            <div class="card h-100" id="tipo-b-2">
+                            <div class="card h-100" id="tipo-b-2" data-value="1">
                                 <div class="card-header">
                                     <span class="h3">CO2</span>
                                 </div>
@@ -214,7 +214,7 @@
                             </div>
                         </div>
                         <div class="col classe-b">
-                            <div class="card h-100" id="tipo-b-3">
+                            <div class="card h-100" id="tipo-b-3" data-value="3">
                                 <div class="card-header">
                                     <span class="h3">P.Q.S</span>
                                 </div>
@@ -226,7 +226,7 @@
 
                         <!-- Classe k -->
                         <div class="col classe-k">
-                            <div class="card h-100" id="tipo-k-1">
+                            <div class="card h-100" id="tipo-k-1" data-value="0">
                                 <div class="card-header">
                                     <span class="h3">Água</span>
                                 </div>
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                         <div class="col classe-k">
-                            <div class="card h-100" id="tipo-k-2">
+                            <div class="card h-100" id="tipo-k-2" data-value="1">
                                 <div class="card-header">
                                     <span class="h3">CO2</span>
                                 </div>
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                         <div class="col classe-k">
-                            <div class="card h-100" id="tipo-k-3">
+                            <div class="card h-100" id="tipo-k-3" data-value="3">
                                 <div class="card-header">
                                     <span class="h3">P.Q.S</span>
                                 </div>
@@ -273,6 +273,7 @@
     <script>
 
         let cena = 1;
+        let pontuacao = 0;
 
         window.addEventListener('resize', function () {
             tamanho();
@@ -347,7 +348,6 @@
                 document.getElementsByClassName('classe-' + id)[i].classList.remove("d-none");
             }
 
-
             let largura = window.innerWidth;
             let altura = window.innerHeight;
             if (largura > altura * 1.7) {
@@ -394,6 +394,12 @@
 
             document.getElementById(`tipo-${id}-${tipo}`).classList.add("bg-info-subtle");
             document.getElementById(`tipo-${id}-${tipo}`).classList.add("shadow");
+
+            valor = document.getElementById(`tipo-${id}-${tipo}`).getAttribute("data-value");
+            pontuacao += Number(valor);
+            document.getElementById(`img-${id}`).src = `./img/${valor}.png`;
+
+            console.log(pontuacao);
 
         }
 
