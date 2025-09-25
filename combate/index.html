@@ -46,7 +46,8 @@
 
     </div>
 
-    <img id="bombeiro" class="position-absolute d-none" src="./img/bombeiro.png">
+    <img id="bombeiro1" class="position-absolute d-none" src="./img/bombeiro1.png">
+    <img id="bombeiro2" class="position-absolute d-none" src="./img/bombeiro2.png">
 
     <div class="position-absolute start-0 bottom-0 card p-1">
         <a href="../index.html" class="btn btn-dark">Voltar</a>
@@ -80,6 +81,21 @@
                         </div>
                     </div>
 
+                    <div class="classe-b">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="./img/classe-b.png" class="img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <strong>Classe B – </strong> Sobre materiais que queimam apenas em sua superfície, em
+                                sua maioria líquidos inflamáveis como álcool e gasolina.
+                            </div>
+                            <div class="col-3">
+                                <img src="./img/ok.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="classe-c">
                         <div class="row">
                             <div class="col-3">
@@ -95,7 +111,24 @@
                         </div>
                     </div>
 
+                    <div class="classe-k">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="./img/classe-k.png" class="img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <strong>Classe K – </strong>Fogo causado por técnicas de se cozinhar, envolvendo banha,
+                                gordura etc. Reconhecidamente é mais difícil de conter que os líquidos inflamáveis da
+                                classe B.
+                            </div>
+                            <div class="col-3">
+                                <img src="./img/ok.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row text-center mt-2">
+                        <!-- Classe a -->
                         <div class="col classe-a">
                             <div class="card h-100" id="tipo1">
                                 <div class="card-header">
@@ -126,6 +159,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Classe C -->
                         <div class="col classe-c">
                             <div class="card h-100" id="tipo1">
                                 <div class="card-header">
@@ -149,13 +184,78 @@
                         <div class="col classe-c">
                             <div class="card h-100" id="tipo3">
                                 <div class="card-header">
-                                    <span class="h3">Pó BC</span>
+                                    <span class="h3">P.Q.S</span>
                                 </div>
                                 <div class="card-body">
                                     <span class="h4 text-success">Sim</span><br>Bom, mas danifica o equipamento
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Classe B -->
+                        <div class="col classe-b">
+                            <div class="card h-100" id="tipo1">
+                                <div class="card-header">
+                                    <span class="h3">Água</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-danger">NÃO</span><br>O líquido incentiva o fogo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col classe-b">
+                            <div class="card h-100" id="tipo2">
+                                <div class="card-header">
+                                    <span class="h3">CO2</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-success">Sim</span><br>Bom
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col classe-b">
+                            <div class="card h-100" id="tipo3">
+                                <div class="card-header">
+                                    <span class="h3">P.Q.S</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-success">Sim</span><br>Excelente
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Classe k -->
+                        <div class="col classe-k">
+                            <div class="card h-100" id="tipo1">
+                                <div class="card-header">
+                                    <span class="h3">Água</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-danger">NÃO</span><br>O líquido incentiva o fogo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col classe-k">
+                            <div class="card h-100" id="tipo2">
+                                <div class="card-header">
+                                    <span class="h3">CO2</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-success">Sim</span><br>Bom
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col classe-k">
+                            <div class="card h-100" id="tipo3">
+                                <div class="card-header">
+                                    <span class="h3">P.Q.S</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="h4 text-success">Sim</span><br>Excelente
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -214,17 +314,34 @@
             for (let i = 0; i < document.getElementsByClassName('classe-a').length; i++) {
                 document.getElementsByClassName('classe-a')[i].classList.add("d-none");
             }
+            for (let i = 0; i < document.getElementsByClassName('classe-b').length; i++) {
+                document.getElementsByClassName('classe-b')[i].classList.add("d-none");
+            }
             for (let i = 0; i < document.getElementsByClassName('classe-c').length; i++) {
                 document.getElementsByClassName('classe-c')[i].classList.add("d-none");
             }
+            for (let i = 0; i < document.getElementsByClassName('classe-k').length; i++) {
+                document.getElementsByClassName('classe-k')[i].classList.add("d-none");
+            }
             if (cena == 1) {
                 id = 'a';
+                b = '1';
             }
             else if (cena == 2) {
                 id = 'c';
+                b = '2';
             }
-            else if (cena == 2) {
+            else if (cena == 4) {
                 id = 'b';
+                b = '1';
+            }
+            else if (cena == 5) {
+                id = 'k';
+                b = '2';
+            }
+            else if (cena == 6) {
+                id = 'b';
+                b = '2';
             }
             for (let i = 0; i < document.getElementsByClassName('classe-' + id).length; i++) {
                 document.getElementsByClassName('classe-' + id)[i].classList.remove("d-none");
@@ -238,19 +355,35 @@
             } else {
                 altura = largura / 1.7;
             }
-            let bombeiro = document.getElementById('bombeiro');
+            let bombeiro = document.getElementById('bombeiro' + b);
 
-            bombeiro.style.height = 342 * (largura / 1054) + 'px';
-            bombeiro.style.top = 224 * (largura / 1054) + 'px';
-            console.log(cena);
             if (cena == 1) {
                 bombeiro.style.left = 727 * (largura / 1054) + 'px';
+                bombeiro.style.height = 342 * (largura / 1054) + 'px';
+                bombeiro.style.top = 224 * (largura / 1054) + 'px';
             }
             else if (cena == 2) {
                 bombeiro.style.left = 80 * (largura / 1054) + 'px';
+                bombeiro.style.height = 342 * (largura / 1054) + 'px';
+                bombeiro.style.top = 224 * (largura / 1054) + 'px';
+            }
+            else if (cena == 4) {
+                bombeiro.style.left = 390 * (largura / 1054) + 'px';
+                bombeiro.style.top = 277 * (largura / 1054) + 'px';
+                bombeiro.style.height = 318 * (largura / 1054) + 'px';
+            }
+            else if (cena == 5) {
+                bombeiro.style.left = 237 * (largura / 1054) + 'px';
+                bombeiro.style.top = 277 * (largura / 1054) + 'px';
+                bombeiro.style.height = 318 * (largura / 1054) + 'px';
+            }
+            else if (cena == 6) {
+                bombeiro.style.left = 607 * (largura / 1054) + 'px';
+                bombeiro.style.top = 277 * (largura / 1054) + 'px';
+                bombeiro.style.height = 318 * (largura / 1054) + 'px';
             }
 
-            document.getElementById("bombeiro").classList.remove("d-none");
+            bombeiro.classList.remove("d-none");
 
             document.getElementById("tipo1").classList.remove("bg-info-subtle");
             document.getElementById("tipo1").classList.remove("shadow");
@@ -269,7 +402,8 @@
             document.getElementById('extintores').classList.add('d-none');
 
             setTimeout(function () {
-                document.getElementById('bombeiro').classList.add('d-none');
+                document.getElementById('bombeiro1').classList.add('d-none');
+                document.getElementById('bombeiro2').classList.add('d-none');
             }, 2000);
 
             setTimeout(function () {
@@ -291,8 +425,23 @@
                 }
                 else if (cena == 2) {
                     document.body.style.backgroundImage = "url(./img/cozinha.png)";
-                    document.getElementById('extintores').classList.remove('d-none');
                     cena += 1;
+                }
+                else if (cena == 4) {
+                    let fogo = document.getElementById('fogo');
+                    fogo.style.top = 312 * (largura / 1054) + 'px';
+                    fogo.style.left = 478 * (largura / 1054) + 'px';
+                    document.getElementById('fogo').classList.remove('d-none');
+                    document.getElementById('extintores').classList.remove('d-none');
+                    cena += 1
+                }
+                else if (cena == 5) {
+                    let fogo = document.getElementById('fogo');
+                    fogo.style.top = 298 * (largura / 1054) + 'px';
+                    fogo.style.left = 859 * (largura / 1054) + 'px';
+                    document.getElementById('fogo').classList.remove('d-none');
+                    document.getElementById('extintores').classList.remove('d-none');
+                    cena += 1
                 }
 
             }, 3000);
@@ -308,10 +457,12 @@
 
                 if (cena == 3) {
                     let fogo = document.getElementById('fogo');
-                    fogo.style.top = 540 * (largura / 1054) + 'px';
-                    fogo.style.left = 674 * (largura / 1054) + 'px';
+                    fogo.style.width = 80 * (largura / 1054) + 'px'
+                    fogo.style.top = 515 * (largura / 1054) + 'px';
+                    fogo.style.left = 657 * (largura / 1054) + 'px';
                     document.getElementById('fogo').classList.remove('d-none');
-                    cena += 1;
+                    document.getElementById('extintores').classList.remove('d-none');
+                    cena += 1
                 }
             }, 5000);
         }
