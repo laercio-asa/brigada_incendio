@@ -130,7 +130,7 @@
                     <div class="row text-center mt-2">
                         <!-- Classe a -->
                         <div class="col classe-a">
-                            <div class="card h-100" id="tipo1">
+                            <div class="card h-100" id="tipo-a-1">
                                 <div class="card-header">
                                     <span class="h5">Água Pressurizada</span>
                                 </div>
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         <div class="col classe-a">
-                            <div class="card h-100" id="tipo2">
+                            <div class="card h-100" id="tipo-a-2">
                                 <div class="card-header">
                                     <span class="h5">Gás Carbônico</span>
                                 </div>
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <div class="col classe-a">
-                            <div class="card h-100" id="tipo3">
+                            <div class="card h-100" id="tipo-a-3">
                                 <div class="card-header">
                                     <span class="h5">Pó Químico Seco</span>
                                 </div>
@@ -162,7 +162,7 @@
 
                         <!-- Classe C -->
                         <div class="col classe-c">
-                            <div class="card h-100" id="tipo1">
+                            <div class="card h-100" id="tipo-c-1">
                                 <div class="card-header">
                                     <span class="h3">Água</span>
                                 </div>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card h-100" id="tipo2">
+                            <div class="card h-100" id="tipo-c-2">
                                 <div class="card-header">
                                     <span class="h3">CO2</span>
                                 </div>
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="col classe-c">
-                            <div class="card h-100" id="tipo3">
+                            <div class="card h-100" id="tipo-c-3">
                                 <div class="card-header">
                                     <span class="h3">P.Q.S</span>
                                 </div>
@@ -194,7 +194,7 @@
 
                         <!-- Classe B -->
                         <div class="col classe-b">
-                            <div class="card h-100" id="tipo1">
+                            <div class="card h-100" id="tipo-b-1">
                                 <div class="card-header">
                                     <span class="h3">Água</span>
                                 </div>
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                         <div class="col classe-b">
-                            <div class="card h-100" id="tipo2">
+                            <div class="card h-100" id="tipo-b-2">
                                 <div class="card-header">
                                     <span class="h3">CO2</span>
                                 </div>
@@ -214,7 +214,7 @@
                             </div>
                         </div>
                         <div class="col classe-b">
-                            <div class="card h-100" id="tipo3">
+                            <div class="card h-100" id="tipo-b-3">
                                 <div class="card-header">
                                     <span class="h3">P.Q.S</span>
                                 </div>
@@ -226,7 +226,7 @@
 
                         <!-- Classe k -->
                         <div class="col classe-k">
-                            <div class="card h-100" id="tipo1">
+                            <div class="card h-100" id="tipo-k-1">
                                 <div class="card-header">
                                     <span class="h3">Água</span>
                                 </div>
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                         <div class="col classe-k">
-                            <div class="card h-100" id="tipo2">
+                            <div class="card h-100" id="tipo-k-2">
                                 <div class="card-header">
                                     <span class="h3">CO2</span>
                                 </div>
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                         <div class="col classe-k">
-                            <div class="card h-100" id="tipo3">
+                            <div class="card h-100" id="tipo-k-3">
                                 <div class="card-header">
                                     <span class="h3">P.Q.S</span>
                                 </div>
@@ -385,15 +385,15 @@
 
             bombeiro.classList.remove("d-none");
 
-            document.getElementById("tipo1").classList.remove("bg-info-subtle");
-            document.getElementById("tipo1").classList.remove("shadow");
-            document.getElementById("tipo2").classList.remove("bg-info-subtle");
-            document.getElementById("tipo2").classList.remove("shadow");
-            document.getElementById("tipo3").classList.remove("bg-info-subtle");
-            document.getElementById("tipo3").classList.remove("shadow");
+            document.getElementById(`tipo-${id}-1`).classList.remove("bg-info-subtle");
+            document.getElementById(`tipo-${id}-1`).classList.remove("shadow");
+            document.getElementById(`tipo-${id}-2`).classList.remove("bg-info-subtle");
+            document.getElementById(`tipo-${id}-2`).classList.remove("shadow");
+            document.getElementById(`tipo-${id}-3`).classList.remove("bg-info-subtle");
+            document.getElementById(`tipo-${id}-3`).classList.remove("shadow");
 
-            document.getElementById("tipo" + tipo).classList.add("bg-info-subtle");
-            document.getElementById("tipo" + tipo).classList.add("shadow");
+            document.getElementById(`tipo-${id}-${tipo}`).classList.add("bg-info-subtle");
+            document.getElementById(`tipo-${id}-${tipo}`).classList.add("shadow");
 
         }
 
